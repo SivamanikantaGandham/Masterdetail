@@ -1,0 +1,51 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" 
+xmlns:core="sap.ui.core"
+controllerName="tcs.sap.ui.hm.controller.View2">
+	<Page title="View 2" showNavButton="true" navButtonPress="onBack">
+		<!-- header -->
+		<!-- content -->
+		<ObjectHeader title="{name}" intro="{healthBenefit}" number="{price}" numberUnit="{curr}" icon="{image}">
+		</ObjectHeader>
+        <IconTabBar >
+            <items>
+                 <!-- Tab 1 -->
+                <IconTabFilter text="More info" icon="sap-icon://warning">
+                    <core:Fragment fragmentName="tcs.sap.ui.hm.fragments.moreInfo" type="XML"></core:Fragment>
+                </IconTabFilter>
+                <!-- tab 2 -->
+                <IconTabFilter text="Suppliers" icon="sap-icon://supplier">
+                    <core:Fragment fragmentName="tcs.sap.ui.hm.fragments.supplier" type="XML"></core:Fragment>
+                </IconTabFilter>
+                <!-- tab 3 -->
+                <IconTabFilter text="Cities" icon="sap-icon://home">
+                    <core:Fragment fragmentName="tcs.sap.ui.hm.fragments.cities" type="XML"></core:Fragment>
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+
+
+		<!--
+		<List id="idList" items="{prod>/ProductCollection}">
+		<items>
+		<ObjectListItem title="{prod>ProductId}{prod>Category}"
+		intro="{prod>MainCategory}{prod>Description}"
+		number="{prod>Quantity}{prod>UoM}"
+		numberUnit="{prod>Price}{prod>CurrencyCode}"
+		icon="{prod>ProductPicUrl}"></ObjectListItem>
+		</items>
+		</List>
+		-->
+		<!-- <Button text="Back" press="onBack"></Button> -->
+		<!-- footer -->
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer></ToolbarSpacer>
+					<Button text="Save" press="onSave" type="Accept">
+					</Button>
+					<Button text="Cancel" press="onCancel" type="Reject">
+					</Button>
+				
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

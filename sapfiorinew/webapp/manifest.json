@@ -1,0 +1,112 @@
+{
+    "sap.app": {
+        "id":"tcs.sap.ui.hm",
+        "type": "application",
+        "ach": "TCS-SAP-UI-HM",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "i18n": "i18n/i18n.properties" 
+    },
+    "sap.ui": {
+        "supportedThemes": ["sap_fiori_3","sap_fiori_3_dark","sap_horizon"],
+        "technology": "UI5",
+        "deviceTypes":{
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        },
+        "fullWidth": true
+    },
+    "sap.ui5":{ 
+        "dependencies": {
+            "minUI5Version": "1.140.0",
+            "libs": {
+                "sap.ui.core":{
+                    "minVersion": "1.140.0"
+                },
+                "sap.ui.layout":{
+                    "minVersion": "1.140.0"
+                },
+                "sap.m":{
+                    "minVersion": "1.140.0"
+                } 
+            }
+        },
+        "contentDensities": {"compact": true,"cozy": true },
+        "models": {
+            "":{
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "models/fruits.json",
+                "settings": {}
+            },
+            "prod":{
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "models/prod.json",
+                "settings": {}
+            },
+            "i18n":{
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleUrl": "i18n/i18n.properties"
+                }
+            }
+        },
+        "rootView":{
+            "id": "idRootView",
+            "viewName": "tcs.sap.ui.hm.view.App",
+            "type": "XML"
+        },
+        "routing": {
+            "config":{
+                "viewPath": "tcs.sap.ui.hm.view",
+                "viewType": "XML",
+                "controlId": "idAppCon"
+            },
+            "routes":[{
+                "name": "start",
+                "pattern": "",
+                "target":["godzilla","pokemon"]
+            },
+            {
+                "name": "jack",
+                "pattern": "fruits/{fruitId}",
+                "target":["godzilla","modi"]
+            },
+            {
+                "name": "daniel",
+                "pattern": "supplier/{supplierId}",
+                "target":["godzilla","Ben10"]
+            }      
+            ],
+            "targets": {
+                "godzilla":{
+                    "viewName": "View1",
+                    "id": "idView1",
+                    "controlAggregation": "masterPages"
+                },
+                "pokemon":{
+                    "viewName": "Empty",
+                    "id": "idEmpty",
+                    "controlAggregation": "detailPages",
+                    "clearControlAggregation": true
+                },
+                "modi":{
+                    "viewName": "View2",
+                    "id":"idView2",
+                    "controlAggregation": "detailPages",
+                    "clearControlAggregation": true
+                },
+                "Ben10":{
+                    "viewName": "SupplierDetail",
+                    "id":"isSupplierDetail",
+                    "controlAggregation": "detailPages",
+                    "clearControlAggregation": true
+                }
+            }
+        }
+
+    }
+}

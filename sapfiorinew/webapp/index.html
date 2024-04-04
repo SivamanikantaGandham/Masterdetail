@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title></title>
+        <style></style>
+        <!-- SAP Bootstraping -->
+        <script src="https://ui5.sap.com/resources/sap-ui-core.js"
+                data-sap-ui-libs="sap.m"
+                data-sap-ui-theme="sap_horizon_dark"
+                data-sap-ui-resourceroots='{
+                    "tcs.sap.ui.hm":"./"
+                }'
+                data-sap-ui-bindingSyntax="complex">
+
+        </script>
+        <script>
+            var oCompContainer = new sap.ui.core.ComponentContainer({
+                name:'tcs.sap.ui.hm'
+            });
+            oCompContainer.placeAt("content");
+
+        </script>
+    </head>
+    <body class="sapUiBody">
+        <div id="content"></div>
+        
+    </body>
+</html>

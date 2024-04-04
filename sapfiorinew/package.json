@@ -1,0 +1,22 @@
+{
+  "name": "sapfiori",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Firstfiori"
+  },
+  "keywords": [
+    "Fiori",
+    "sapui5"
+  ],
+  "author": "Sivamanikanta",
+  "license": "ISC",
+  "dependencies": {
+    "sapui5-runtime": "^1.5.5"
+  }
+}

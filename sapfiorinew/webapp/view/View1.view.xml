@@ -1,0 +1,41 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tcs.sap.ui.hm.controller.View1">
+    <Page title="View 1">
+        <!-- header -->
+        <headerContent>
+            <Button icon="sap-icon://add" press="onAddDataDialogOpen" tooltip="Add a new fruit"/>
+            <Button icon="sap-icon://action" press="onGoTo" tooltip="Goes to next view"></Button>
+        </headerContent>
+        
+        <content>
+            <SearchField id="idSearch" search="onSearch"></SearchField>
+            <!-- Aggrigation binding with Absolute path at List and Relative path at obj list item -->
+            <!-- <List id="idList" mode="SingleSelectMaster"  itemPress="onSelectItemNavigation" items="{path: '/fruits', sorter:{path:'taste', group:'true'}}"> -->
+                <List id="idList" mode="Delete" delete="onItemDelete"  itemPress="onSelectItemNavigation" items="{path: '/fruits', sorter:{path:'taste', group:'true'}}">
+                <items>
+               
+                    <!-- to display business object for user -->
+                    <ObjectListItem type="Navigation" title="{name}" 
+                    intro="{taste}" 
+                    number="{price}" 
+                    numberUnit="{curr}" 
+                    icon="{image}"></ObjectListItem>
+                </items>
+                
+            </List>
+
+            <!-- <List id="idList1" items="{/ProductCollection}">
+                <items>
+                    <ObjectListItem title="{ProductId}{Category}" 
+                    intro="{MainCategory}{Description}" 
+                    number="{Quantity}{UoM}" 
+                    numberUnit="{Price}{CurrencyCode}" 
+                    icon="{ProductPicUrl}"></ObjectListItem>
+                </items>
+            </List> -->
+        </content>
+        <!-- footer -->
+        <footer>
+            <Toolbar ></Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

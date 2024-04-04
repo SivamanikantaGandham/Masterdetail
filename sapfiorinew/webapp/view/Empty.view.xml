@@ -1,0 +1,12 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tcs.sap.ui.hm.controller.Empty">
+    <Page title="Empty">
+        <Image width="100%" height="100%" src="https://e0.pxfuel.com/wallpapers/14/133/desktop-wallpaper-fruit-and-vegetables-ultra-ultra-high-quality-fruits.jpg"></Image>
+    
+        <!-- footer -->
+        <footer>
+            <Toolbar >
+                <ToolbarSpacer ></ToolbarSpacer>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

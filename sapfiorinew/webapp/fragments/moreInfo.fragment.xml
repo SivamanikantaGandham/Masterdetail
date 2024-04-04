@@ -1,0 +1,23 @@
+<!-- This is the example of static fragment in xml -->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+	<f:SimpleForm>
+		<f:content>
+			<Label text="Name">
+			</Label>
+			<Text text="{name}">
+			</Text>
+			<Label text="Color">
+			</Label>
+			<Text text="{color}">
+			</Text>
+			<Label text="Price">
+			</Label>
+			<Text text="{price} {curr}">
+			</Text>
+			<Label text="Availability">
+			</Label>
+			<ObjectStatus text="{path:'availability', formatter:'.formatter.getStatus'}" state="{path:'availability', formatter:'.formatter.getState'}">
+			</ObjectStatus>
+		</f:content>
+	</f:SimpleForm>
+</core:FragmentDefinition>
